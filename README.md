@@ -29,7 +29,7 @@ cd backend
 python -m venv .venv && . .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 cp .env.example .env  # adjust DATABASE_URL if needed
-# Make sure Postgres is running (default: postgres/postgres on localhost:5432, db=inventory)
+# Make sure Postgres is running and u have created a database (default: postgres/postgres on localhost:5432, db=inventory)
 python seed.py
 uvicorn app.main:app --reload
 ```
